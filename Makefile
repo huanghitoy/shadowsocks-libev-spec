@@ -95,7 +95,7 @@ endef
 
 define Package/shadowsocks-libev-spec/install
 	$(INSTALL_DIR) $(1)/usr/bin
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/ss-{redir,tunnel} $(1)/usr/bin
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/ss-{local,redir,tunnel} $(1)/usr/bin
 	$(INSTALL_BIN) ./files/shadowsocks.rule $(1)/usr/bin/ss-rules
 	$(INSTALL_DIR) $(1)/etc/config
 	$(INSTALL_DATA) ./files/shadowsocks.config $(1)/etc/config/shadowsocks
